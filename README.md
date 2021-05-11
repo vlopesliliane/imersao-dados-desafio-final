@@ -2,7 +2,7 @@
 
 # Comparação de modelos de *Machine Learning* na previsão dos Mecanismos de Ação (MoA) e descoberta de novas drogas
 
-##### Base de Dados: Esse projeto foi baseado no desafio do [Laboratory Innovation Science at Harvard](https://lish.harvard.edu/) disponibilizado  inicialmente em uma competição no [Kaggle](https://www.kaggle.com/c/lish-moa/data) e agora no evento de Imersão Dados promovido pela Alura.
+##### Base de Dados: Esse projeto foi inspirado no desafio do [Laboratory Innovation Science at Harvard](https://lish.harvard.edu/) disponibilizado  inicialmente em uma competição no [Kaggle](https://www.kaggle.com/c/lish-moa/data) e agora no evento de Imersão Dados promovido pela Alura.
 
 ## Sumário 
 
