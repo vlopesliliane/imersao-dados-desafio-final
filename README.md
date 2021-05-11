@@ -27,16 +27,15 @@ Os cientistas buscam então identificar um **alvo proteico** associado a uma doe
 
 ### <a name=“A-Dor”><a/> :boom: A Dor 
 
-O alto custo humano envolvido na análise manual das respostas celulares de forma a concluir se **Dado um composto e uma assinatura celular, houve algum MoA ativado**.
-Sabendo-se que **cada composto químico** é considerado uma **classe** diferente, tem-se um **problema de classificação** multiclasse, no qual busca-se avaliar se  **Dado um composto e uma assinatura celular, houve algum MoA ativado?**
+O alto custo humano envolvido na análise e busca de semelhanças as respostas celulares com padrões conhecidos em grandes bancos de dados genômicos, como bibliotecas de expressão gênica ou padrões de viabilidade celular de drogas, com MoAs conhecidos.
 
 ### <a name=“O-Diagnostico”><a/> :mag: O Diagnóstico
 
-Sabendo-se que **cada composto químico** é pode ser considerado uma **classe** diferente, tem-se no prente estudo de caso um **problema de classificação** multiclasse, no qual busca-se prever se **Dado um composto e uma assinatura celular, algum MoA será ativado**
+Sabendo-se que **cada composto químico** pode ser considerado uma **classe** diferente tem-se, no presente estudo de caso, um **problema de classificação** multiclasse.
 
 ### <a name=“O-remedio”><a/> :pill: O Remédio
 
-Encontrar um modelo de *Machine Learning* capaz de prever se **Dado um composto e uma assinatura celular algum MoA será ativado**
+Encontrar um modelo de *Machine Learning* capaz de prever se **Dado um composto e uma assinatura celular algum MoA será ativado**.
 
 ## <a name=“A-Consulta-Medica”><a/> :hospital: A Consulta Médica
 
