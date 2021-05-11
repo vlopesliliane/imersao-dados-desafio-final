@@ -65,6 +65,13 @@ Assim, o DataFrame é composto por **23814 linhas/registros** e **879 colunas/at
 ## <a name=“Consideracoes-finais-acerca-das-limitacoes-e-melhorias-futuras”><a/> :repeat: O *check-up* médico: Considerações finais acerca das limitações e melhorias futuras
 
 ## <a name=“Referencias-bibliograficas”><a/> :books: O Catálogo de Medicamentos: Referências Bibliográficas
-
+   
+1. [Validação Cruzada com Scikit-learn](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.cross_val_score.html)
+2. [Validação cruzada: avaliando o desempenho do estimador com Scikit-learn](https://scikit-learn.org/stable/modules/cross_validation.html)
+3. [Validação cruzada](https://pt.wikipedia.org/wiki/Valida%C3%A7%C3%A3o_cruzada)
+4. [Machine Learning in Drug Discovery](https://pubs.acs.org/doi/full/10.1021/acs.jcim.9b00136)
+5. [sklearn.naive_bayes.GaussianNB ](https://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.GaussianNB.html?highlight=naive#sklearn.naive_bayes.GaussianNB/)
+6. [A Gentle Introduction to Bayes Theorem for Machine Learning](https://machinelearningmastery.com/bayes-theorem-for-machine-learning/)
+7. [Validação Cruzada Aninhada com Scikit-learn](https://dataml.com.br/validacao-cruzada-aninhada-com-scikit-learn/)
 
 # ***-Mergulhe fundo, é apenas o primeiro passo!-***
