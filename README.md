@@ -12,10 +12,9 @@
 4. [O Remédio](O-Remedio)
 5. [A Consulta Médica](A-Consulta-Medica)
     * [A anamnese: Compreensão do conjunto de dados](Compreensao-do-conjunto-de-dados)
-    * [Os Exames Laboratoriais: Análise exploratória e estatística do Conjunto de dados](Analise-exploratoria-e-estatistica-do-Conjunto-de-dados)
-    * [A Receita Médica: Modelos de *Machine Learning* aplicáveis](Pesquisa-de-modelos-de-Machine-Learning-aplicaveis)
+    * [Os Exames Laboratoriais: Análise exploratória e estatística do Conjunto de dados](Analise-exploratoria-e-estatistica-do-Conjunto-de-dados)  
 6. [O Tratamento: Modelagem aplicação e teste de modelos de *Machine Learning*](Modelagem-aplicacao-e-teste-de-modelos-de-Machine-Learning)
-7. [A Cura: Comparação dos resultados de cada modelo](Comparacao-dos-resultados-de-cada-modelo)
+7. [A Receita Médica: Comparação dos resultados de cada modelo](Comparacao-dos-resultados-de-cada-modelo)
 8. [O *check-up* médico: Considerações finais acerca das limitações e melhorias futuras](Consideracoes-finais-acerca-das-limitacoes-e-melhorias-futuras)
 9. [O Catálogo de Medicamentos: Referências Bibliográficas](Referencias-bibliograficas)
 
@@ -58,11 +57,10 @@ Assim, o DataFrame é composto por **23814 linhas/registros** e **879 colunas/at
 
 ### <a name=“Analise-exploratoria-e-estatistica-do-Conjunto-de-dados”><a/> :chart_with_downwards_trend: Os Exames Laboratoriais: Análise exploratória e estatística do Conjunto de dados
   
-### <a name=“Pesquisa-de-modelos-de-Machine-Learning-aplicaveis”><a/> :pencil: A Receita Médica: Modelos de *Machine Learning* aplicáveis
 
 ### <a name=“Modelagem-aplicacao-e-teste-de-modelos-de-Machine-Learning”><a/> :syringe: O Tratamento: Modelagem, aplicação e teste de modelos de *Machine Learning*
   
-### <a name=“Comparacao-dos-resultados-de-cada-modelo”><a/> :sunglasses: A Cura: Comparação dos resultados de cada modelo
+### <a name=“Comparacao-dos-resultados-de-cada-modelo”><a/> :sunglasses: :pencil: A Receita Médica: Comparação dos resultados de cada modelo
   
 ## <a name=“Consideracoes-finais-acerca-das-limitacoes-e-melhorias-futuras”><a/> :repeat: O *check-up* médico: Considerações finais acerca das limitações e melhorias futuras
 
