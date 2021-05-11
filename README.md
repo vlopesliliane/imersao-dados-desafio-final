@@ -1,7 +1,7 @@
 
 # Desafio Final Imersão Dados
 
-##Status: Fianalizado
+##Status: Em andamento
 
 Título: Projeto: Drug Discovery
 
