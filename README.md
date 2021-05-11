@@ -11,13 +11,13 @@
 3. [O Diagnóstico](O-Diagnostico)
 4. [O Remédio](O-Remedio)
 5. [A Consulta Médica](A-Consulta-Medica)
-    * [A anamnese: Compreensão do conjunto de dados](Compreensao-do-conjunto-de-dados);
-    * [Os Exames Laboratoriais: Análise exploratória e estatística do Conjunto de dados](Analise-exploratoria-e-estatistica-do-Conjunto-de-dados);
-    * [A Receita Médica: Modelos de *Machine Learning* aplicáveis](Pesquisa-de-modelos-de-Machine-Learning-aplicaveis);
-6. [O Tratamento: Modelagem aplicação e teste de modelos de *Machine Learning*](Modelagem-aplicacao-e-teste-de-modelos-de-Machine-Learning);
-7. [A Cura: Comparação dos resultados de cada modelo](Comparacao-dos-resultados-de-cada-modelo);
-8. [A Consulta de Retorno: Considerações finais acerca das limitações e melhorias futuras](Consideracoes-finais-acerca-das-limitacoes-e-melhorias-futuras);
-9. [O Catálogo de Medicamentos: Referências Bibliográficas](Referencias-bibliograficas).
+    * [A anamnese: Compreensão do conjunto de dados](Compreensao-do-conjunto-de-dados)
+    * [Os Exames Laboratoriais: Análise exploratória e estatística do Conjunto de dados](Analise-exploratoria-e-estatistica-do-Conjunto-de-dados)
+    * [A Receita Médica: Modelos de *Machine Learning* aplicáveis](Pesquisa-de-modelos-de-Machine-Learning-aplicaveis)
+6. [O Tratamento: Modelagem aplicação e teste de modelos de *Machine Learning*](Modelagem-aplicacao-e-teste-de-modelos-de-Machine-Learning)
+7. [A Cura: Comparação dos resultados de cada modelo](Comparacao-dos-resultados-de-cada-modelo)
+8. [O *check-up* médico: Considerações finais acerca das limitações e melhorias futuras](Consideracoes-finais-acerca-das-limitacoes-e-melhorias-futuras)
+9. [O Catálogo de Medicamentos: Referências Bibliográficas](Referencias-bibliograficas)
 
 ## <a name=“O-Paciente”><a/> :boy: O Paciente
 
@@ -64,7 +64,7 @@ Assim, o DataFrame é composto por **23814 linhas/registros** e **879 colunas/at
   
 ### <a name=“Comparacao-dos-resultados-de-cada-modelo”><a/> :sunglasses: A Cura: Comparação dos resultados de cada modelo
   
-## <a name=“Consideracoes-finais-acerca-das-limitacoes-e-melhorias-futuras”><a/> :repeat: A Consulta de Retorno: Considerações finais acerca das limitações e melhorias futuras
+## <a name=“Consideracoes-finais-acerca-das-limitacoes-e-melhorias-futuras”><a/> :repeat: O *check-up* médico: Considerações finais acerca das limitações e melhorias futuras
 
 ## <a name=“Referencias-bibliograficas”><a/> :books: O Catálogo de Medicamentos: Referências Bibliográficas
 
