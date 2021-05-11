@@ -1,6 +1,6 @@
 <a href="https://ibb.co/x2HNNwK"><img src="https://i.ibb.co/BfN99vH/1-Banner-Desafio-Git-Hub.png" alt="1-Banner-Desafio-Git-Hub" border="0"></a>
 
-# Comparação de modelos de Machine Learning na previsão dos Mecanismos de Ação (MoA) e descoberta de novas drogas
+# Comparação de modelos de *Machine Learning* na previsão dos Mecanismos de Ação (MoA) e descoberta de novas drogas
 
 ##### Base de Dados: Esse projeto foi baseado no desafio do Laboratory Innovation Science at Harvard disponibilizado  inicialmente em uma competição no [Kaggle](https://www.kaggle.com/c/lish-moa/data) e agora no evento de Imersão Dados promovido pela Alura.
 
