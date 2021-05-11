@@ -2,33 +2,45 @@
 
 # Comparação de modelos de *Machine Learning* na previsão dos Mecanismos de Ação (MoA) e descoberta de novas drogas
 
-##### Base de Dados: Esse projeto foi baseado no desafio do Laboratory Innovation Science at Harvard disponibilizado  inicialmente em uma competição no [Kaggle](https://www.kaggle.com/c/lish-moa/data) e agora no evento de Imersão Dados promovido pela Alura.
+##### Base de Dados: Esse projeto foi baseado no desafio do [Laboratory Innovation Science at Harvard](https://lish.harvard.edu/) disponibilizado  inicialmente em uma competição no [Kaggle](https://www.kaggle.com/c/lish-moa/data) e agora no evento de Imersão Dados promovido pela Alura.
 
 ## Sumário 
 
-1. [Compreensão do conjunto de dados](Compreensao-do-conjunto-de-dados);
-2. [Análise exploratória e estatística do Conjunto de dados](Analise-exploratoria-e-estatistica-do-Conjunto-de-dados);
-4. [Pesquisa de modelos de *Machine Learning* aplicáveis](Pesquisa-de-modelos-de-Machine-Learning-aplicaveis);
-5. [Modelagem aplicação e teste de modelos de *Machine Learning*](Modelagem-aplicacao-e-teste-de-modelos-de-Machine-Learning);
-7. [Comparação dos resultados de cada modelo](Comparacao-dos-resultados-de-cada-modelo);
-8. [Considerações finais acerca das limitações e melhorias futuras](Consideracoes-finais-acerca-das-limitacoes-e-melhorias-futuras);
-9. [Referências bibliográficas](Referencias-bibliograficas).
+1. [O Paciente](O-Paciente)
+2. [A Dor](A-Dor)
+3. [O Diagnóstico](O-Diagnostico)
+4. [O Remédio](O-Remedio)
+5. [A Consulta Médica](A-Consulta-Medica)
+    * [A anamnese: Compreensão do conjunto de dados](Compreensao-do-conjunto-de-dados);
+    * [Os Exames Laboratoriais: Análise exploratória e estatística do Conjunto de dados](Analise-exploratoria-e-estatistica-do-Conjunto-de-dados);
+    * [A Receita Médica: Modelos de *Machine Learning* aplicáveis](Pesquisa-de-modelos-de-Machine-Learning-aplicaveis);
+6. [O Tratamento: Modelagem aplicação e teste de modelos de *Machine Learning*](Modelagem-aplicacao-e-teste-de-modelos-de-Machine-Learning);
+7. [A Cura: Comparação dos resultados de cada modelo](Comparacao-dos-resultados-de-cada-modelo);
+8. [A Consulta de Retorno: Considerações finais acerca das limitações e melhorias futuras](Consideracoes-finais-acerca-das-limitacoes-e-melhorias-futuras);
+9. [O Catálogo de Medicamentos: Referências Bibliográficas](Referencias-bibliograficas).
 
-## Escopo do Projeto 
+## <a name=“O-Paciente”><a/> :boy: O Paciente
 
-O Termo **MoA** é uma abreviação para **Mecanismo de Ação** e se refere a **atividade biológica** observada em uma **molécula** quando acionada por algum composto químico **(fármacos/drogas)**. Assim, nos testes de novos medicamentos são realizados experimentos nos quais células humanas são tratadas com a droga e as **respostas celulares** são analisadas para cada **par fármaco-MoA** são registrados valores numéricos médios que representam a perda logarítmica.
+No processo de desenvolvimento de novos medicamentos, os cientistas realizam experimentos nos quais células humanas são previamente tratadas com um medicamento. Nesse processo, as **respostas celulares**, representadas por valores numéricos médios de perda logarítmica, são registradas e analisadas para cada **par fármaco-MoA**. O Termo **MoA** é uma abreviação para **Mecanismo de Ação** e se refere a **atividade biológica** observada em uma **molécula** quando acionada por algum composto químico **(medicamentos/fármacos/drogas)**. 
 
-### Problema de Negócio 
+Os cientistas buscam então identificar um **alvo proteico** associado a uma doença e desenvolver uma molécula que possa modular essa proteína alvo, tratando a doença.
 
+### <a name=“A-Dor”><a/> :boom: A Dor 
+
+O alto custo humano envolvido na análise manual das respostas celulares de forma a concluir se **Dado um composto e uma assinatura celular, houve algum MoA ativado**.
 Sabendo-se que **cada composto químico** é considerado uma **classe** diferente, tem-se um **problema de classificação** multiclasse, no qual busca-se avaliar se  **Dado um composto e uma assinatura celular, houve algum MoA ativado?**
 
-### Objetivo do Projeto
+### <a name=“O-Diagnostico”><a/> :mag: O Diagnóstico
+
+Sabendo-se que **cada composto químico** é pode ser considerado uma **classe** diferente, tem-se no prente estudo de caso um **problema de classificação** multiclasse, no qual busca-se prever se **Dado um composto e uma assinatura celular, algum MoA será ativado**
+
+### <a name=“O-remedio”><a/> :pill: O Remédio
 
 Encontrar um modelo de *Machine Learning* capaz de prever se **Dado um composto e uma assinatura celular algum MoA será ativado**
 
-## Desenvolvimento
+## <a name=“A-Consulta-Medica”><a/> :hospital: A Consulta Médica
 
-### <a name=“Compreensao-do-conjunto-de-dados”><a/> Compreensão do conjunto de dados
+### <a name=“Compreensao-do-conjunto-de-dados”><a/> :bookmark_tabs: A Anamnese: Compreensão do conjunto de dados
 
 Para análise, foram disponibilizados dois conjuntos de dados: **dados_experimentos** e **dados_resultados**. Para fins de estudo, os dados de interesse para teste e análise foram **combinados** em um único conjunto de dados: **dados_combinados**.
 Assim, o DataFrame é composto por **23814 linhas/registros** e **879 colunas/atributos**. Cada registro representa um experimento e as colunas definem os atributos de cada um desses experimentos, conforme abaixo: 
@@ -45,17 +57,17 @@ Assim, o DataFrame é composto por **23814 linhas/registros** e **879 colunas/at
 | ativo_moa                        | bool    | indica de 1 ou mais mecanismos (Moa) foram ativados  
 
 
-### <a name=“Analise-exploratoria-e-estatistica-do-Conjunto-de-dados”><a/> Análise exploratória e estatística do Conjunto de dados
+### <a name=“Analise-exploratoria-e-estatistica-do-Conjunto-de-dados”><a/> :chart_with_downwards_trend: Os Exames Laboratoriais: Análise exploratória e estatística do Conjunto de dados
   
-### <a name=“Pesquisa-de-modelos-de-Machine-Learning-aplicaveis”><a/> Pesquisa de modelos de *Machine Learning* aplicáveis
+### <a name=“Pesquisa-de-modelos-de-Machine-Learning-aplicaveis”><a/> :pencil: A Receita Médica: Modelos de *Machine Learning* aplicáveis
 
-### <a name=“Modelagem-aplicacao-e-teste-de-modelos-de-Machine-Learning”><a/> Modelagem aplicação e teste de modelos de *Machine Learning* aplicáveis
+### <a name=“Modelagem-aplicacao-e-teste-de-modelos-de-Machine-Learning”><a/> :syringe: O Tratamento: Modelagem, aplicação e teste de modelos de *Machine Learning*
   
-### <a name=“Comparacao-dos-resultados-de-cada-modelo”><a/> Comparação dos resultados de cada modelo
+### <a name=“Comparacao-dos-resultados-de-cada-modelo”><a/> :sunglasses: A Cura: Comparação dos resultados de cada modelo
   
-## <a name=“Consideracoes-finais-acerca-das-limitacoes-e-melhorias-futuras”><a/> Considerações finais acerca das limitações e melhorias futuras
+## <a name=“Consideracoes-finais-acerca-das-limitacoes-e-melhorias-futuras”><a/> :repeat: A Consulta de Retorno: Considerações finais acerca das limitações e melhorias futuras
 
-## <a name=“Referencias-bibliograficas”><a/> Referências bibliográficas
+## <a name=“Referencias-bibliograficas”><a/> :books: O Catálogo de Medicamentos: Referências Bibliográficas
 
 
-**Mergulhe fundo, é apenas o primeiro passo!**
+# ***-Mergulhe fundo, é apenas o primeiro passo!-***
