@@ -96,7 +96,7 @@ Para estabelecer um **bom valor de acurácia**, precisamos de uma **base compara
 
 Para isso, o *Scikit-Learn*, já tem implementado alguns algoritmos que testam modelos **menos complexos** e que podem ser usados como **base comparativa**. Neste caso, vamos usar o **DummyClassifier.**
 
-### <a name=“Comparacao-dos-resultados-de-cada-modelo”><a/> :sunglasses: :pencil: A Receita Médica: Comparação dos resultados de cada modelo
+### <a name=“Comparacao-dos-resultados-de-cada-modelo”><a/> :pencil: A Receita Médica: Comparação dos resultados de cada modelo
    
 #### Resultado do teste simultâneo de seis modelos de *Machine Learning*, em comparação com os resultados do  do modelo *DummyClassifier.*
 
