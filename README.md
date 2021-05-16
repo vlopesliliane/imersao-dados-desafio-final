@@ -121,9 +121,8 @@ Após aplicação do método para **ajuste dos parâmetros** do algoritmo **SVC(
 Como podemos ver pela **Matriz de Confusão**  (Grupo de Teste e Treino), o **modelo baseado em SVC** conseguiu **prever** 
 com muito bem a **ativação** dos mecanismos **MoA** para ambos os **estados (False, True)**.
 
-<a href="https://imgbb.com/"><img src="https://i.ibb.co/jzHBFdR/7-Confusion-matrix-teste.png" alt="7-Confusion-matrix-teste" border="0"></a>
-
-<a href="https://imgbb.com/"><img src="https://i.ibb.co/zf23zDk/8-Confusion-matrix-treino.png" alt="8-Confusion-matrix-treino" border="0"></a>
+| <a href="https://imgbb.com/"><img src="https://i.ibb.co/jzHBFdR/7-Confusion-matrix-teste.png" alt="7-Confusion-matrix-teste" border="0"></a> | <a href="https://imgbb.com/"><img src="https://i.ibb.co/zf23zDk/8-Confusion-matrix-treino.png" alt="8-Confusion-matrix-treino" border="0"></a> |
+|----------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|
 
 ## <a name=“Consideracoes-finais-acerca-das-limitacoes-e-melhorias-futuras”><a/> :repeat: O *check-up* médico: Considerações finais acerca das limitações e melhorias futuras
 
