@@ -54,14 +54,77 @@ Assim, o DataFrame é composto por **23814 linhas/registros** e **879 colunas/at
 | n_moa                            | int64   | quantidade de mecanismos de ação (MoA) ativados no experimento                                                       |
 | ativo_moa                        | bool    | indica de 1 ou mais mecanismos (Moa) foram ativados  
 
+Observa-se pelo *dashboard* abaixo que os **dados encontram-se balanceados**, com **exceção da coluna *tratamento***. 
+Para esse atributo, observa-se que foi realizado um número expressivo de **experientos *com_droga* a mais do que *com_controle***. Essa característica é **específica** dessa a área de **negócio**, que exige que uma porcentagem dos experimentos seja ralizada com placebo, na **técnica duplo-cego**, para fins de comparação e controle.
+
+<a href="https://ibb.co/12QThJW"><img src="https://i.ibb.co/ry0HTfr/2-Balanceamento-dos-dados.png" alt="2-Balanceamento-dos-dados" border="0"></a>
+
+#### Limpeza do conjunto de dados
+Concluímos que as drogas utilizadas nos tratamento do tipo ***com_controle***, por se tratarem de **placebo**, **jamais serão capazes de ativar algum mecanismo de ação (MoA)**. Assim, **deletamos** todas as linhas cuja **droga** é igual a **"cacb2b860"**.
+(21948, 878)
+
+Após a limpeza, o DataFrame ficou com **21948 linhas/registros** e **878 colunas/atributos**
 
 ### <a name=“Analise-exploratoria-e-estatistica-do-Conjunto-de-dados”><a/> :chart_with_downwards_trend: Os Exames Laboratoriais: Análise exploratória e estatística do Conjunto de dados
+   
+<a href="https://ibb.co/vcpXRvD"><img src="https://i.ibb.co/hgbYw1C/3-Media-expressao-genica-Xviabilidade-celular.png" alt="3-Media-expressao-genica-Xviabilidade-celular" border="0"></a>
+
+<a href="https://ibb.co/c6WKCQh"><img src="https://i.ibb.co/x1nKf6q/4-variancia-express-o-genica-Xviabilidade-celular.png" alt="4-variancia-express-o-genica-Xviabilidade-celular" border="0"></a>
+
+<a href="https://ibb.co/m6MctCB"><img src="https://i.ibb.co/18wmKfn/5-media-vari-ncia-expressao-genica-conjunto-Eviabilidade-celular.png" alt="5-media-vari-ncia-expressao-genica-conjunto-Eviabilidade-celular" border="0"></a>
   
 
 ### <a name=“Modelagem-aplicacao-e-teste-de-modelos-de-Machine-Learning”><a/> :syringe: O Tratamento: Modelagem, aplicação e teste de modelos de *Machine Learning*
-  
+   
+#### **Validação Cruzada com Scikit-learn**
+
+Para evitar o **overfitting** e demais erros metodológicos na construção do modelo e ainda assim mover-se na busca pelos melhores parâmetros **(Tuning)** aplicáveis ao problema de negócio, uma boa prática é a realização da **validação cruzada ** , uma técnica que particiona o conjuento de dads em vários subconjuntos, mutualmente exclusivos. Nessa técnica, utiliza-se parte dos subconjuntos para estimar os melhores valores para os parâmetros e a outra parte dos subconjuntos para validação do aprendizado do modelo. 
+
+Esta técnica é amplamente empregada em problemas onde o objetivo da modelagem é a descoberta de conhecimento em conjuntos de dados novos e desconhecidos com as mesmas características do modelo, como é o caso do nosso projeto de **Drug Discovery**.[[Fonte 3]](https://pt.wikipedia.org/wiki/Valida%C3%A7%C3%A3o_cruzada)
+
+Assim, buscou-se utilizar a **validação cruzada** para comparar os **melhores modelos de Machine Learning** aplicáveis ao problema de **Drug Discovery**. 
+
+Os modelos a serem testados foram escolhidos com base no artigo **Machine Learning Methods in Drug Discovery** [[Fonte 4]](https://pubs.acs.org/doi/full/10.1021/acs.jcim.9b00136)
+
+Existem três tipos principais de **métodos** para realização do **particionamento do conjunto de dados** na validação cruzada, sendo eles: **o método holdout, o k-fold e o leave-one-out.** [[Fonte 3]](https://pt.wikipedia.org/wiki/Valida%C3%A7%C3%A3o_cruzada)
+
+No modelo  de Drug Discovery em estudo foi utlilizada a **validação cruzada pelo método k-fold** que consiste em: 
+
+> **Dividir** o conjunto total de dados em **k subconjuntos mutuamente exclusivos do mesmo tamanho** e, a partir daí, **um subconjunto** é utilizado para **teste** e os **k-1 restantes** são utilizados para **estimação dos parâmetros**, fazendo-se o cálculo da acurácia do modelo. Este processo é **realizado k vezes** alternando de forma circular o subconjunto de teste. **Ao final das k iterações calcula-se a acurácia** sobre os erros encontrados, através da equação descrita anteriormente, obtendo assim uma **medida mais confiável** sobre a capacidade do modelo de representar o processo gerador dos dados. [[Fonte 3]](https://pt.wikipedia.org/wiki/Valida%C3%A7%C3%A3o_cruzada)
+
+Para estabelecer um **bom valor de acurácia**, precisamos de uma **base comparativa**, quer dizer, preciso dos resultados de um outro modelo para entender se estamos acertando mais ou menos casos.
+
+Para isso, o *Scikit-Learn*, já tem implementado alguns algoritmos que testam modelos **menos complexos** e que podem ser usados como **base comparativa**. Neste caso, vamos usar o **DummyClassifier.**
+
 ### <a name=“Comparacao-dos-resultados-de-cada-modelo”><a/> :sunglasses: :pencil: A Receita Médica: Comparação dos resultados de cada modelo
+   
+#### Resultado do teste simultâneo de seis modelos de *Machine Learning*, em comparação com os resultados do  do modelo *DummyClassifier.*
+
+Pelo teste simultâneo, temos que o algoritmo que apresentou a melhor acurácia foi o SVC
+
+<a href="https://ibb.co/5jz6k38"><img src="https://i.ibb.co/jwxTzYM/6-Comparacao-modelos.png" alt="6-Comparacao-modelos" border="0"></a>
   
+#### Ajustando a dose 
+
+O ***GridSearchCV*** é uma ferramenta usada para **automatizar** o processo de **ajuste dos parâmetros** de um algoritmo, pois ele fará de maneira sistemática **diversas combinações** dos parâmetros e depois de avaliá-los os armazenará num **único objeto**.
+
+Após aplicação do método para **ajuste dos parâmetros** do algoritmo **SVC()**, obtivemos os seguintes resusltados:
+
+| Nome do Parâmetro | Tipo                                                  | Descrição                                                                                                                                                                   | Melhor valor  |
+|-------------------|-------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
+| C                 | float                                                 | Parâmetro de regularização. A intensidade da regularização é inversamente proporcional a C. Deve ser estritamente positiva.                                                 | 10            |
+| gamma             | {‘scale’, ‘auto’} or float                            | Coeficiente de kernel para 'rbf', 'poly' e 'sigmóide'.                                                                                                                      | 0.0001        |
+| Kernel            | {'linear', 'poli', 'rbf', 'sigmoid', 'pré-computado'} | Especifica o tipo de kernel a ser usado no algoritmo. Deve ser 'linear', 'poli', 'rbf', 'sigmóide', 'pré-computado' ou chamável. Se nenhum for fornecido, 'rbf' será usado. | 'rbf'         |
+
+#### Grau de acerto 
+
+Como podemos ver pela **Matriz de Confusão**  (Grupo de Teste e Treino), o **modelo baseado em SVC** conseguiu **prever** 
+com muito bem a **ativação** dos mecanismos **MoA** para ambos os **estados (False, True)**.
+
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/jzHBFdR/7-Confusion-matrix-teste.png" alt="7-Confusion-matrix-teste" border="0"></a>
+
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/zf23zDk/8-Confusion-matrix-treino.png" alt="8-Confusion-matrix-treino" border="0"></a>
+
 ## <a name=“Consideracoes-finais-acerca-das-limitacoes-e-melhorias-futuras”><a/> :repeat: O *check-up* médico: Considerações finais acerca das limitações e melhorias futuras
 
 ## <a name=“Referencias-bibliograficas”><a/> :books: O Catálogo de Medicamentos: Referências Bibliográficas
